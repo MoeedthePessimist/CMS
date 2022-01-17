@@ -67,7 +67,6 @@
             @foreach($reviews as $data)
                 <x-review :data="$data" />
             @endforeach
-
         </div>
 
 
