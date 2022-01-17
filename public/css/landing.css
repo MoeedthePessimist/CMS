@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,300;0,500;1,400&family=Shizuru&display=swap');
+
+
+/* General code */
+.center-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carousel */
+.carousel {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    z-index: -3;
+}
+
+.carousel-background {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: url('../images/1.jpg') center/cover no-repeat fixed;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.carousel-logo {
+    width: 10%;
+}
+
+.carousel-desc {
+    width: 65%;
+    padding: 2em 3em;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.carousel--heading {
+    font-size: 1.2rem;
+    font-family: 'Shizuru', 'monospace';
+    margin-bottom: 3rem;
+}
+
+.carousel--heading span {
+    display: inline-block;
+    position: relative;
+    animation: wave 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.carousel--text {
+    font-family: 'Roboto', monospace;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.6rem;
+}
+
+
+/* Slider */
+.slider {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+
+} 
+
+
+.slide--container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 
+.slide--heading > h1 {
+    font-family: 'Shizuru' monospace;
+    font-size: 3rem;
+} */
+
+
+
+
+
+
+
+
+
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+
+    /* carousel */
+    .carousel--text {
+        font-size: 1.2rem;
+    }
+
+    .carousel--heading {
+        font-size: 3rem;
+    }
+
+
+
+}
+
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+
+    /* carousel */
+    .carousel--text {
+        font-size: 1.2rem;
+    }
+
+    .carousel--heading {
+        font-size: 3rem;
+    }
+
+
+}
+
+
+
+/* animations */
+@keyframes wave {
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-20px)
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

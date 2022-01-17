@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.review-container{
+    width: 100%;
+    border: 2px solid red;
+    background: #ececec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.name-container {
+    border: 1px solid green;
+    width: 100%;
+    padding: 1rem 1.2rem;
+}
+
+.comment-container {
+    width: 100%;
+    padding: 0 1.2rem;
+}
+

@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,300;0,500;1,400&family=Shizuru&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Quicksand' monospace;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.product-info-container {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    /* max-width: 1000px; */
+    min-width: 200px;
+    height: 100vh;
+    font-size: 3vw;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    /* transform: translateY(-800px); */
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.product-info-display{
+    /* transform: translateY(0px); */
+
+}
+
+.product-info-container > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.product-info-img-container {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: yellow; */
+}
+
+.product-info-img {
+    width: 200px;
+    min-width: 150px;
+}
+
+.product-info-infor {
+    position: relative;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0;
+}
+
+.product-info-name {
+    padding: 1.2rem 0;
+}
+
+.product-info-price {
+    color: green;
+    padding: 0 0 1.2rem 0;
+}
+
+
+.product-info-infor > a {
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 1.1rem 1.1rem;
+    color: white;
+    background: rgb(45, 43, 43);
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+
+
+
+/* rating forms */
+.product-rating {
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.product-rating > form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #eee;
+}
+
+.product-rating > form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 3rem;
+    /* border: 2px solid yellow; */
+}
+
+.product-rating > form > div > label {
+    font-size: 4vw;
+    padding: 2rem 0;
+    font-family: 'Quicksand' monospace;
+}
+
+
+.product-rating > form > div > input, 
+.product-rating > form > div > textarea {
+    border: none;
+    outline: none;
+    padding: 1.2rem 1rem;
+}
+
+
+
+.product-rating > form > .btn > input {
+    border: 1px solid #000;
+    background-color: transparent;
+    z-index: 2;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #fff;
+    transition: all 0.3s ease-in-out;
+    font-size: 2vw;
+}
+
+
+.product-rating > form > .btn > input:hover {
+    box-shadow: inset 31rem 0 0 0 #fff;
+}
+
+
+
+@media screen and (min-width: 440px) {
+    .product-info-container {
+        font-size: 2vw;
+    }
+
+    
+    .product-rating > form > div > label {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+
+    .product-info-img {
+        width: 500px;
+        min-width: 150px;
+    }
+
+    .product-info-container {
+
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;    
+    }
+}

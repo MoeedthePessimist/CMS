@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,300;0,500;1,400&family=Shizuru&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand';
+}
+
+/* .my-slider {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+
+.card-container {
+    border-radius: 1.2em;
+    overflow:hidden;
+    font-family: monospace;
+    background: black;
+}
+
+
+.card--img > img {
+    width: 36vw;
+}
+
+.card--info {
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.card--btn {
+    text-align: center;
+    padding: 3rem 3rem;
+}
+
+.card--btn > a {
+    border: 1px solid #fff;
+    text-decoration: none;
+    padding: 1.3rem 3rem;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.card--btn > a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.card--btn > a:hover::before {
+    transform: scaleX(1);
+    
+}
+
+.card--btn > a:hover {
+    color: #000;
+}
+
+@media
+
+ */
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+.prod-card-container {
+    color: white;
+    border-radius: 1.2em;
+    max-width: 300px;
+    overflow:hidden;
+    font-family: monospace;
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+}
+
+
+.prod-img-container > img {
+    width: 300px;
+}
+
+
+.prod-name-container {
+    height: 10vh;
+    text-align: center;
+    border-bottom: 1px solid #9c9c9c;
+    
+}
+
+
+
+.prod-name-container > p {
+    font-size: 1.5vw;
+}
+
+.prod-price-container {
+    padding: 1rem 0;
+    position: relative;
+    color: green;
+    text-align: center;
+    background: white; 
+    border-bottom: 1px solid #9c9c9c;
+    transition: all 0.7s ease-in-out;
+}
+
+.prod-price-container::before{
+    content: 'HOVER TO REVEAL PRICE';
+    position: absolute;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: green;
+    transition: all 0.7s ease-in-out;
+    transform-origin: left;
+    cursor: pointer;
+}
+
+
+
+.prod-price-container:hover::before {
+    background: white;
+    transform: scaleX(0);
+}
+
+
+.prod-btns-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 1.5rem;
+}
+
+.prod-btns-container > span {
+    /* border: 2px solid blue; */
+    padding: 1.5rem 0;
+}
+
+.prod-btns-container > span > a {
+    text-decoration: none;
+    padding: 1.1rem 1.1rem;
+    font-size: 1.5vw;
+    /* padding: 2rem 1rem; */
+    color: white;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #fff;
+}
+
+.prod-btns-container > span > #view {
+    box-shadow: inset 0 0 0 0 #55ff00;
+}
+
+.prod-btns-container > span > #view:hover {
+    box-shadow: inset 7rem 0 0 0 #0088ff;
+}
+
+.prod-btns-container > span > #add {
+    box-shadow: inset 0 0 0 0 #0088ff;
+}
+
+.prod-btns-container > span > #add:hover {
+    box-shadow: inset 8rem 0 0 0 #55ff00;
+}
+
+@media screen and (max-width: 600px) {
+    .prod-name-container > p {
+        font-size: 3vw;
+    }
+
+    .prod-btns-container > span > a {
+        text-decoration: none;
+        padding: 1.1rem 1.1rem;
+        font-size: 3vw;
+        /* padding: 2rem 1rem; */
+        color: white;
+        transition: all 0.5s ease-in-out;
+        border: 1px solid #fff;
+    }
+}
