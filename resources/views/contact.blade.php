@@ -18,7 +18,10 @@
     <x-header.header />
 
     <div class="form-container center">
-        <form action="POST" class='center'>
+        <form action = "{{url('/postFeedback')}}" method = "post" enctype = "multipart/form-data"class='center'>
+            
+            @csrf
+
             <div class="heading">
                 <h1>Share Your Feedback</h1>
             </div>

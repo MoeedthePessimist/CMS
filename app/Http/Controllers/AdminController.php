@@ -6,14 +6,21 @@ use Illuminate\Http\Request;
 
 use App\Models\Item;
 
+use App\Models\order;
+
+use App\Models\Feedback;
+
+
 class AdminController extends Controller
 {
     public function getRequests() {
-        return view('admin.requests');
+        $data = order::all();
+        return view('admin.requests', compact('data'));
     }
 
     public function getAdminDash() {
-        return view('admin.adminDash');
+        $data = feedback::all();
+        return view('admin.adminDash', compact('data'));
     }
 
     public function getItems() {
@@ -51,5 +58,19 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function deleteReq($id) {
+        $data=order::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function deleteFeedback($id) {
+        $data=feedback::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+
 }
+
 

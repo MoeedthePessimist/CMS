@@ -1,5 +1,8 @@
 @php
     use App\Http\Controllers\LandingController as landingController;
+    use Illuminate\Support\Facades\DB;
+    $userID = landingController::getUserId();
+    $totalItems = DB::table('carts')->where('userId', $userID)->get();
 @endphp
 
 <!DOCTYPE html>
@@ -55,7 +58,15 @@
                     <li><a href="/about">About us</a>
                     </li>
                     <li><a href="/contact">Feedback</a>
-                    </li>       
+                </li>       
+                <li>
+                    @if($userID > 0)
+                        <a href="/viewCart/{{$userID}}"><img 
+                        style='display: inline; margin-right: 3px' 
+                        src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/20/000000/external-cart-grocery-flatart-icons-lineal-color-flatarticons.png"
+                        />Cart({{count($totalItems)}})</a>
+                    @endif
+                </li>
                         @if (Route::has('login'))                        
                             @auth
                                     <li><a href="{{ route('profile.show') }}">

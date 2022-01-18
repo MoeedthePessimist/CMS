@@ -55,5 +55,16 @@ Route::post('/uploadReview', [UserController::class, 'upload']);
 
 // Route::post('/addReview', [UserController::class, 'addReview']);
 
+Route::get('/addCart/{prodid}/{userid}', [UserController::class, 'addToCart']);
 
+Route::get('/viewCart/{userId}', [UserController::class, 'viewCart']);
 
+Route::get('/removeCart/{id}', [UserController::class, 'deleteFromCart']);
+
+Route::post('/postOrder', [UserController::class, 'addOrder']);
+
+Route::get('/confirmOrder/{id}', [AdminController::class, 'deleteReq']);
+
+Route::post('/postFeedback', [UserController::class, 'addFeedback']);
+
+Route::get('/deleteFeedback{id}', [AdminController::class, 'deleteFeedback']);

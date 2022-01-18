@@ -2,6 +2,10 @@
     use App\Http\Controllers\LandingController as landingController;
     use Illuminate\Support\Facades\DB;
     $userID = landingController::getUserId();
+
+    $user = DB::table('users')->where('id', $userID)->get()[0];
+    $name = $user->name;
+    $email = $user->email;
     $data = DB::table('carts')->where('userId', $userID)->get();
 @endphp
 
@@ -47,14 +51,18 @@
             </p>
         </div>
 
-        <form>
-                <input type="hidden" name="name" value="">
-                <input type="hidden" name="email" value="">
-                <input type="hidden" name="payment" value="">
-                <button type="submit">Buy</button>
-            </form>
+        <form action = "{{url('/postOrder')}}" method = "post" enctype = "multipart/form-data">
 
-    </div>
+            @csrf
+        
+            <input type="hidden" name="name" value={{$name}}>
+            <input type="hidden" name="email" value={{$email}}>
+            <input type="hidden" name="payment" value={{$total}}>
+            <input type="hidden" name='userID' value={{$userID}}>
+            <button type="submit">Buy</button>
+        </form>
+
+    </div>  
 
     <!-- footer -->
     <x-Footer.footer />

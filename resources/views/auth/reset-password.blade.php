@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <img style = 'display: inline;'src="https://img.icons8.com/nolan/35/computer.png"/>
+
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

@@ -1,0 +1,118 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,300;0,500;1,400&family=Shizuru&display=swap'); */
+
+
+/* cart */
+
+.cart-items-container{
+    margin: 100px 0 0 0;
+    display: flex;
+    padding: 2rem 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c3c3c3;
+}
+
+.cart-items-container > h1 {
+    font-weight: 900;
+    font-size: 2em;
+    padding: 2rem 3rem;
+}
+
+
+
+
+/* cart items */
+.cart-item {
+    display: flex;
+    border-radius: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 2rem 1rem;
+    width: 90%;
+    font-size: 2ch;
+    margin-bottom: 20px;
+
+}
+
+.cart-item > .item-image > img {
+    width: 50vw;
+}
+
+.cart-item > .item-info {
+    padding: 1.5rem 2rem;
+}
+
+.cart-item > .item-info > h1 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.cart-item > .item-buttons {
+    padding: 2rem 3rem;
+} 
+
+.cart-item > .item-buttons > a {
+    padding: 1.2rem 2rem;
+    background: red;
+    color: white;
+    border: 1px solid black;
+    box-shadow: inset 0 0 0 0 #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.cart-item > .item-buttons > a:hover {
+    color: red;
+    box-shadow: inset 20rem 0 0 0 #fff;
+
+}
+
+
+.checkout-bar {
+    background: lime; 
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.checkout-bar > .total > p {
+    font-family: 'Shizuru' 'Quicksand' monospace;
+    font-size: 2.2em;
+    color: white;
+}
+
+.checkout-bar > form > button {
+    background: white;
+    padding: 1.2rem 5rem;
+}
+
+
+
+
+@media only screen and (min-width: 450px){
+    .cart-item {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem 0;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .cart-item {
+
+        width: 80%;
+    }
+    .cart-item > .item-image > img {
+        width: 20vw;
+    }
+
+
+}

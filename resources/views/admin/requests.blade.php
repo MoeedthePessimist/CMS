@@ -20,13 +20,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td data-label="name">Stupido </td>
-                        <td data-label="email">stupido@gmail.com</td>
-                        <td data-label="payment">$2300</td>
-                        <td data-label="confirm order"><a>Confirm</a></td>
-                    </tr>
-                    
+                    @foreach($data as $data)
+                        <tr>
+                            <td data-label="name">{{$data->Name}}</td>
+                            <td data-label="email">{{$data->Email}}</td>
+                            <td data-label="payment">${{$data->payment}}</td>
+                            <td data-label="confirm order"><a href = '/confirmOrder/{{$data->id}}'>Confirm</a></td>
+                        </tr>
+                    @endforeach                    
                 </tbody>
             </table>
         </div>

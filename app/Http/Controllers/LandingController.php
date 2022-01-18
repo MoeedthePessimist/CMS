@@ -25,4 +25,12 @@ class LandingController extends Controller
             }
         }
     }
+
+    public function getUserID() {
+        if(Auth::check()) {
+            return Auth::user()->id;
+        }else 
+            return 0;
+    }
+
 }

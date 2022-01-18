@@ -1,7 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <img style = 'display: inline;'src="https://img.icons8.com/nolan/35/computer.png"/>
+
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -43,6 +56,9 @@
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>
+
+            
+
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
