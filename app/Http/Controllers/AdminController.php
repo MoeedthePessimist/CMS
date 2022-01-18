@@ -1,15 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Models\Item;
-
 use App\Models\order;
-
 use App\Models\Feedback;
-
 
 class AdminController extends Controller
 {
@@ -34,13 +28,9 @@ class AdminController extends Controller
 
     public function upload(Request $request) {
         $data = new Item;
-
         $image = $request->img;
-
         $imagename = time().'.'.$image->getClientOriginalExtension();
-
         $request->img-> move('productimages', $imagename);
-
         $data -> image = $imagename;
         $data -> Title = $request->title;
         $data -> Price = $request->price;
@@ -48,7 +38,6 @@ class AdminController extends Controller
         $data -> manufacturer = $request->manufacturer;
         $data -> category = $request->category;
         $data -> save();
-
         return redirect()->back();
     }
 
@@ -69,8 +58,6 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back();
     }
-
-
 }
 
 
